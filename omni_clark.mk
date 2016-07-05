@@ -45,6 +45,9 @@ $(call inherit-product, device/motorola/clark/device.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/motorola/clark/overlay
 
+#$(call inherit-product, device/motorola/clark/device.mk)
+$(call inherit-product-if-exists, vendor/motorola/clark/clark-vendor.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := omni_clark
 PRODUCT_DEVICE := clark
@@ -52,9 +55,9 @@ PRODUCT_BRAND := Android
 PRODUCT_MODEL := XT1572
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
-
-#$(call inherit-product, device/motorola/clark/device.mk)
-$(call inherit-product-if-exists, vendor/motorola/clark/clark-vendor.mk)
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+ro.product.model \
+ro.product.device
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
