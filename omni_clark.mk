@@ -55,10 +55,7 @@ PRODUCT_BRAND := Android
 PRODUCT_MODEL := XT1572
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-ro.product.model \
-ro.product.device
-
+TARGET_VENDOR := motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=motorola/clark_reteu/clark:6.0/MPHS24.49-18-3/3:user/release-keys \
